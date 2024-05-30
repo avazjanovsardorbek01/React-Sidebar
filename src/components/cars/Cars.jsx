@@ -4,9 +4,9 @@ import "./cars.css";
 const Cars = () => {
   const [cars, setCars] = useState([]);
   const [modal, setModal] = useState(false);
-  const openModal = () => {
-    setModal(true);
-  };
+  // const openModal = () => {
+  //   setModal(true);
+  // };
   return (
     <>
       <UserModal open={modal} toogle={() => setModal(false)} />
@@ -15,8 +15,11 @@ const Cars = () => {
           <div className="col-md-10 offset-1">
             <div className="row">
               <div className="col-4">
-                <button className="btn btn-success" onClick={openModal}>
-                  Add user
+                <button
+                  className="btn btn-success"
+                  onClick={() => setModal(true)}
+                >
+                  Open Modal
                 </button>
               </div>
               <div className="col-8">
